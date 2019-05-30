@@ -1,0 +1,27 @@
+package q3_factoryMethod;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class MainClass {
+	
+	public static void main(String[] args) {
+		Double price;
+		String product;
+
+		HashMap<String,Double> hm=getItem();
+	}
+	public static HashMap<String,Double> getItem(){
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter 1 to buy Cricket Bat, 2 to Badminton Racket");
+		int ch=sc.nextInt();
+		IProductType pt;
+		if(ch==1) {
+			pt=new Cricket();
+		}else {
+			pt=new Badminton();
+		}
+		sc.close();
+		return pt.giveItem();
+	}
+}

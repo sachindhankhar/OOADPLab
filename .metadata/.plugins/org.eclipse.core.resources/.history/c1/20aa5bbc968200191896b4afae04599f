@@ -1,0 +1,17 @@
+package q1_adapter;
+
+public class MauriTax {
+	Double income;
+	MauriTax(Double inc){
+		this.income=inc;
+	}
+	public String calculateTax() {
+		if(this.income<10000) {
+			return Double.toString(income*0.2);
+		}else if(this.income>=100000 && this.income<1000000) {
+			return Double.toString(income*0.5);
+		}else {
+			return Double.toString(income*0.15);
+		}
+	}
+}

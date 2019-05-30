@@ -1,0 +1,37 @@
+package q8_decorator;
+
+import java.util.HashMap;
+
+public class NewClassification extends Decorator{
+	
+	HashMap<String,Integer> sport=new HashMap<>();
+	Sports sp;
+	NewClassification(Sports sp){
+		this.sp=sp;
+	}
+	public HashMap<String, Integer> getStock(String s) {
+		
+		if(s.equals("GamesOnTable")) {
+			sport.putAll(sp.getStock("tt"));
+			System.out.println(sport.keySet());
+			sport.putAll(sp.getStock("snooker"));
+		}else if(s.equals("BoardGames")) {
+			sport.putAll(sp.getStock("carom"));
+			sport.putAll(sp.getStock("chess"));
+		}else if(s.equals("CourtGames")) {
+			sport.putAll(sp.getStock("basketBall"));
+			sport.putAll(sp.getStock("badminton"));
+		}else if(s.equals("AdventureGames")) {
+			sport.putAll(sp.getStock("trekking"));
+			sport.putAll(sp.getStock("paraGliding"));
+		}else if(s.equals("StadiumGames")) {
+			sport.putAll(sp.getStock("cricket"));
+			sport.putAll(sp.getStock("footBall"));
+		}else if(s.equals("Athletics")) {
+			sport.putAll(sp.getStock("running"));
+			sport.putAll(sp.getStock("highJump"));
+		}
+		return this.sport;
+	}
+
+}

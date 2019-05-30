@@ -1,0 +1,22 @@
+package q5_observer;
+
+import java.util.ArrayList;
+
+public class FestivalDiscount implements IObservable{
+	
+	String msg="Diwali Sale , shoes:20% off!";
+	ArrayList<IObserver> observers=new ArrayList<>();
+	public void add(IObserver ob) {
+		observers.add(ob);
+		
+	}
+
+	public void notify(IObserver ob) {
+		// TODO Auto-generated method stub
+		
+	}
+	public int offer() {
+		return msg;
+	}
+
+}

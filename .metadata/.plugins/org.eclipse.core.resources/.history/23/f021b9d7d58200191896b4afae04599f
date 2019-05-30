@@ -1,0 +1,29 @@
+package q5_observer;
+
+import java.util.Scanner;
+
+public class MainClass {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		IObservable ob=new FestivalDiscount();;
+		while(true) {
+			System.out.println("Enter 1 to add new Customer");
+			System.out.println("2 to notify");
+			System.out.println("3 to exit");
+			int ch=sc.nextInt();
+			if(ch==1) {
+				System.out.println("Enter your name");
+				String name=sc.next();
+				System.out.println("Enter your phone");
+				String phone=sc.next();
+				IObserver cus=new Customer(ob,name,phone);
+				ob.add(cus);
+			}else if(ch==2) {
+				ob.notify();
+			}else {
+				break;
+			}
+		}
+		sc.close();
+	}
+}

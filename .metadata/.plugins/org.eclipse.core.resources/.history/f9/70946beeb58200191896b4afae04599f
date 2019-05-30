@@ -1,0 +1,23 @@
+package q3_factoryMethod;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Senior {
+	Scanner sc=new Scanner(System.in);
+	public Double getDiscount() {
+		IDiscountType dis=new Discount15();
+		return dis.calculateDiscount();
+	}
+	public HashMap<String,Double> getItem(){
+		System.out.println("Enter 1 to buy Cricket Bat, 2 to Badminton Racket");
+		int ch=sc.nextInt();
+		IProductType pt;
+		if(ch==1) {
+			pt=new Cricket();
+		}else {
+			pt=new Badminton();
+		}
+		return pt.giveItem();
+	}
+}

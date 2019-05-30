@@ -1,0 +1,15 @@
+package q5_observer;
+
+public class Customer1 implements IObserver{
+
+	IObservable ob;
+	Customer1(IObservable ob){
+		this.ob=ob;
+	}
+	public void update() {
+		String offer=this.ob.offer();
+		System.out.println("New offer!"+offer);
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+package q3_factoryMethod;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Senior {
+	public Double getDiscount() {
+		IDiscountType dis=new Discount15();
+		return dis.calculateDiscount();
+	}
+}

@@ -1,0 +1,9 @@
+package q4_bridge;
+
+public class Senior implements CustomerType{
+
+	public Double getDiscount(DiscountType dis) {
+		return dis.getDiscount();
+	}
+
+}

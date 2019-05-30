@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;q5_observer.Customer1&apos; to &apos;Customer&apos;&#x0D;&#x0A;- Original project: &apos;q5_observer&apos;&#x0D;&#x0A;- Original element: &apos;q5_observer.Customer1&apos;&#x0D;&#x0A;- Renamed element: &apos;q5_observer.Customer&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Customer1&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;q5_observer{Customer1.java[Customer1" matchStrategy="1" name="Customer" qualified="false" references="true" similarDeclarations="false" stamp="1559218362941" textual="false" version="1.0"/>
+</session>

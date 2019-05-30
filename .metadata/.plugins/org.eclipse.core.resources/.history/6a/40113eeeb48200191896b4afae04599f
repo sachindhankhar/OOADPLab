@@ -1,0 +1,6 @@
+package q3_factoryMethod;
+
+public interface ICustomer {
+	IDiscountType getDiscount();
+	IProductType getProduct();
+}

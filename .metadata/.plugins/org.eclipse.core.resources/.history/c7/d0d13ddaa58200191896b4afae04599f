@@ -1,0 +1,28 @@
+package q2_strategy;
+
+import java.util.Scanner;
+
+public class Customer {
+	public static void main(String[] args) {
+		IDiscountType dt=null;
+		Scanner sc =new Scanner(System.in);
+		while(true) {
+			System.out.println("Enter 1 for First Time Customer");
+			System.out.println("Enter 2 for Senior Citizen");
+			System.out.println("Enter 3 for Regular");
+			System.out.println("Enter 4 to exit");
+			int ch=sc.nextInt();
+			if(ch==1) {
+				dt=new FirstTime();
+			}else if(ch==2) {
+				dt=new Senior();
+			}else if(ch==3) {
+				dt=new Regular();
+			}else {
+				break;
+			}
+		}
+		System.out.println("Discount is:"+dt.calculateDiscount()+(new StoreLevel()).calculateDiscount());
+		sc.close();
+	}
+}

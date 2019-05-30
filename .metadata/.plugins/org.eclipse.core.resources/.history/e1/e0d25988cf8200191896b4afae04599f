@@ -1,0 +1,8 @@
+package q4_bridge;
+
+public class FirstTime implements CustomerType{
+	
+	public Double getDiscount(DiscountType dis) {
+		return dis.getDiscount();
+	}
+}

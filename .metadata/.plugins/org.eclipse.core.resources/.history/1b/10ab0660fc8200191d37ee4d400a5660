@@ -1,0 +1,26 @@
+package q9_template;
+
+import java.util.HashMap;
+
+public class OnlineMode extends Payment{
+	
+ 	HashMap<String,Integer> Items=new HashMap<>();
+ 	OnlineMode(Items item){
+ 		this.Items=item.getItem();
+ 	}
+	public void selectitem() {
+		
+		
+	}
+
+	public void doPayment() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void doDelivery() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

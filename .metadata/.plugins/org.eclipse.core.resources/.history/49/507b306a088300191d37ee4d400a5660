@@ -1,0 +1,37 @@
+package q8_decorator;
+
+import java.util.HashMap;
+
+public class OutdoorSports implements Sports{
+	HashMap<String,Integer> tt=new HashMap<>();
+	HashMap<String,Integer> snooker=new HashMap<>();
+	HashMap<String,Integer> carom=new HashMap<>();
+	HashMap<String,Integer> chess=new HashMap<>();
+	HashMap<String,Integer> basketBall=new HashMap<>();
+	HashMap<String,Integer> badminton=new HashMap<>();
+	
+	OutdoorSports(){
+		tt.put("ttRacket",10);
+		tt.put("ttBall",20);
+		snooker.put("cueStick",15);
+		snooker.put("ball",18);
+		carom.put("stiker",11);
+		carom.put("caromBoard",15);
+		chess.put("chessBoard",14);
+		chess.put("chessPiecesSet",10);
+		basketBall.put("basketBall",4);
+		basketBall.put("basketBallNet",8);
+		badminton.put("racket",12);
+		badminton.put("shuttle",19);
+	}
+	public HashMap<String,Integer> getStock(String s) {
+		HashMap<String,Integer> mp=null;
+		if(s.equals("tt")) mp=this.tt;
+		else if(s.equals("snooker")) mp=this.snooker;
+		else if(s.equals("carom")) mp=this.carom;
+		else if(s.equals("chess")) mp=this.chess;
+		else if(s.equals("basketBall")) mp=this.basketBall;
+		else if(s.equals("badminton")) mp=this.badminton;
+		return mp;
+	}
+}

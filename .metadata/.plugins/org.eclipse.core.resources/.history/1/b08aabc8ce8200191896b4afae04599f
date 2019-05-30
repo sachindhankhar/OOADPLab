@@ -1,0 +1,9 @@
+package q4_bridge;
+
+public class Regular implements CustomerType{
+
+	public Double getDiscount(DiscountType dis) {
+		dis=new Discount15();
+		return dis.getDiscount();
+	}
+}

@@ -1,0 +1,46 @@
+package q9_template;
+
+import java.util.HashMap;
+import java.util.Random;
+import java.util.Scanner;
+
+public class OnlineMode extends Payment{
+	Scanner sc=new Scanner(System.in);
+ 	HashMap<String,Integer> items=new HashMap<>();
+ 	String product;
+ 	Integer price;
+ 	String addr;
+ 	OnlineMode(Items item){
+ 		this.items=item.getItem();
+ 		for(String k:items.keySet()) {
+ 			System.out.println("Item->"+k+"\t,Price"+items.get(k));
+ 		}
+ 	}
+	public void selectitem() {
+		System.out.println("Enter item you want to buy");
+ 		product=sc.next();
+ 		price=items.get(product);
+	}
+
+	public void doPayment() {
+		System.out.println("Enter delivery address");
+		addr=sc.next();
+		System.out.println("Initial Price:"+price);
+		Integer sp=new Random().nextInt(500)+100;
+		System.out.println("Shipping Charges:"+sp);
+		System.out.println("Total amount:"+(price+sp));
+		System.out.println("Online banking,processing...");
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void doDelivery() {
+		System.out.println("Payment done");
+		System.out.println("product to address "+addr+" will be delivered soon");
+		
+	}
+	
+}

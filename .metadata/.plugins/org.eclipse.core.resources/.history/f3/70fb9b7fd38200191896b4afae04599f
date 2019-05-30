@@ -1,0 +1,6 @@
+package q5_observer;
+
+public interface IObservable {
+	void add(IObserver ob);
+	void notify(IObserver ob);
+}
